@@ -29,5 +29,7 @@ app.post('/books', bookHandler.postBooks);
 
 app.delete('/books/:id', bookHandler.deleteBooks);
 
+app.put('/books/:id', bookHandler.updateBooks);
+
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
