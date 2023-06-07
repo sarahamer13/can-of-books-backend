@@ -4,9 +4,12 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require ('mongoose');
+const verifyUser = require('./Modules/Authorize');
 
 const bookHandler = require ('./Modules/bookHandler');
 
+// Responsible for getting green light with jwt
+app.use(verifyUser);
 
 const app = express();
 app.use(cors());
